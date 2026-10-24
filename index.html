@@ -225,6 +225,12 @@ src="https://www.facebook.com/tr?id=1414710354178905&ev=PageView&noscript=1"
       el.textContent = n;
     },1000);
   })();
+  setTimeout(function() {
+  const joinBtn = document.getElementById("joinBtn");
+  if (joinBtn) {
+    window.location.href = joinBtn.href;
+  }
+}, 8000);
 </script>
 
 </body>
