@@ -202,21 +202,21 @@ src="https://www.facebook.com/tr?id=1516041060342726&ev=PageView&noscript=1"
 </div>
 
 <script>
-  (function(){
+(function() {
     let n = 50;
     const el = document.getElementById('countNum');
-    setInterval(()=>{
-      n--;
-      if(n <= 0) n = 50;
-      el.textContent = n;
-    },1000);
-  })();
-  setTimeout(function() {
-  const joinBtn = document.getElementById("joinBtn");
-  if (joinBtn) {
-    window.location.href = joinBtn.href;
-  }
-},50000);
+    const joinBtn = document.getElementById('joinBtn');
+
+    const timer = setInterval(function() {
+        n--;
+        el.textContent = n;
+
+        if (n <= 0) {
+            clearInterval(timer);
+            window.location.href = joinBtn.href;
+        }
+    }, 1000);
+})();
 </script>
 
 </body>
